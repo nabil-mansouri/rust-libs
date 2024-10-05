@@ -1,0 +1,24 @@
+[package]
+name = "quickjs"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+syn = "2.0.70"
+flutter_rust_bridge = "2.2.0"
+tokio = { version = "1.36.0", features = ["full"] }
+tokio-util = "0.7.11"
+rquickjs = { version = "0.6.2", features = ["futures", "macro", "array-buffer", "loader"] }
+serde = "1.0.204"
+deno_core =  { version = "0.306.0", features = ["default"] }
+deno_web = "0.197.0"
+deno_url = "0.166.0"
+deno_webidl = "0.166.0"
+deno_console = "0.166.0"
+deno_fetch = "0.190.0"
+deno_net = "0.158.0"
+lazy_static = "1.4.0"
+

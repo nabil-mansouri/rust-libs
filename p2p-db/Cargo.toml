@@ -1,0 +1,17 @@
+[package]
+name = "p2p-db"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+syn = "2.0.70"
+flutter_rust_bridge = "2.2.0"
+libp2p= { version="0.53.2", features = [ "async-std", "identify", "macros", "noise", "ping", "rendezvous", "tcp", "tokio", "yamux", "websocket", "dns", "tls","gossipsub", "quic", "relay", "request-response", "cbor", "dcutr", "autonat", "rsa", "ecdsa","secp256k1", "upnp", "memory-connection-limits"] }
+tokio = { version = "1.38.0", features = ["full"] }
+tokio-util = "0.7.11"
+futures = "0.3.30"
+strum_macros = "0.26"
+sled = {version ="0.34.7", features=["compression"]}
